@@ -1,0 +1,321 @@
+/* Dark Card List - Tracker.gg Style */
+.card-list-container {
+  background: #1A2332;
+  border: 1px solid #2D3748;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-list-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #A855F7 0%, #EC4899 50%, #3B82F6 100%);
+}
+
+.card-list-header {
+  margin-bottom: 2rem;
+}
+
+.card-list-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-count {
+  color: #94A3B8;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.card-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.card-item {
+  display: grid;
+  grid-template-columns: 50px 80px 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.25rem;
+  background: #0F1923;
+  border-radius: 12px;
+  border: 1px solid #2D3748;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+.card-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.25);
+  border-color: #A855F7;
+  background: #1A2332;
+}
+
+.card-item:hover::after {
+  opacity: 1;
+  box-shadow: 0 0 20px currentColor;
+}
+
+.card-rank {
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #A855F7 0%, #EC4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.card-image-container {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(168, 85, 247, 0.08);
+  border-radius: 12px;
+  border: 2px solid #2D3748;
+  transition: all 0.3s ease;
+}
+
+.card-item:hover .card-image-container {
+  border-color: #A855F7;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+  transform: scale(1.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.3));
+}
+
+.card-image-placeholder {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0F1923;
+  border-radius: 12px;
+  font-size: 2rem;
+  color: #2D3748;
+}
+
+.card-info {
+  min-width: 180px;
+}
+
+.card-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.card-meta {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.elixir {
+  color: #06B6D4;
+  font-weight: 700;
+  background: rgba(6, 182, 212, 0.12);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+}
+
+.rarity {
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  background: rgba(168, 85, 247, 0.12);
+}
+
+.card-stats {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+.stat-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stat-main, .stat-winrate, .stat-level {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: #1A2332;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #2D3748;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.stat-percent, .stat-record, .stat-range {
+  font-size: 0.85rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.stat-winrate {
+  border: 2px solid;
+}
+
+.stat-winrate.good {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: #10B981;
+}
+
+.stat-winrate.good .stat-value {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-winrate.good .stat-label {
+  color: #10B981;
+}
+
+.stat-winrate.neutral {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: #F59E0B;
+}
+
+.stat-winrate.neutral .stat-value {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-winrate.neutral .stat-label {
+  color: #F59E0B;
+}
+
+.stat-winrate.bad {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: #EF4444;
+}
+
+.stat-winrate.bad .stat-value {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-winrate.bad .stat-label {
+  color: #EF4444;
+}
+
+.load-more-button {
+  width: 100%;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+  border: 2px solid #A855F7;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.load-more-button:hover {
+  background: linear-gradient(135deg, #A855F7 0%, #9333EA 100%);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .card-list-container {
+    padding: 1.5rem;
+  }
+
+  .card-item {
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .card-rank {
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 1.25rem;
+  }
+
+  .card-image-container {
+    grid-row: 1 / 3;
+    grid-column: 2;
+    justify-self: start;
+    width: 64px;
+    height: 64px;
+  }
+
+  .card-info {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+
+  .card-stats {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    margin-left: 0;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+}

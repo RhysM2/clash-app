@@ -1,0 +1,247 @@
+/* Counter Cards - Dark Theme */
+.counter-cards-container {
+  background: #1A2332;
+  border: 1px solid #2D3748;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.counter-cards-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #EF4444 0%, #DC2626 50%, #B91C1C 100%);
+}
+
+.counter-header {
+  margin-bottom: 2rem;
+}
+
+.counter-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.counter-subtitle {
+  font-size: 0.9rem;
+  color: #94A3B8;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.counter-card {
+  background: #0F1923;
+  border: 2px solid #2D3748;
+  border-radius: 12px;
+  padding: 1.25rem;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.counter-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #EF4444;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.counter-card:hover::after {
+  transform: scaleX(1);
+}
+
+.counter-card.very-bad {
+  border-color: rgba(239, 68, 68, 0.5);
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+}
+
+.counter-card.bad {
+  border-color: rgba(245, 158, 11, 0.5);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.05) 100%);
+}
+
+.counter-card:hover {
+  transform: translateY(-4px);
+  border-color: #EF4444;
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+.counter-rank {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+}
+
+.counter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.counter-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 2rem;
+}
+
+.counter-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: #0F1923;
+  border: 2px solid #2D3748;
+}
+
+.counter-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.counter-card-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.counter-card-rarity {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.counter-card-rarity.common { background: rgba(148, 163, 184, 0.2); color: #94A3B8; }
+.counter-card-rarity.rare { background: rgba(245, 158, 11, 0.2); color: #F59E0B; }
+.counter-card-rarity.epic { background: rgba(168, 85, 247, 0.2); color: #A855F7; }
+.counter-card-rarity.legendary { background: rgba(251, 191, 36, 0.2); color: #FBBF24; }
+.counter-card-rarity.champion { background: rgba(6, 182, 212, 0.2); color: #06B6D4; }
+
+.counter-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.counter-stat-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: #1A2332;
+  border-radius: 8px;
+  border: 1px solid #2D3748;
+}
+
+.counter-win-rate,
+.counter-loss-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.counter-percentage {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #F59E0B;
+}
+
+.counter-percentage.danger {
+  color: #EF4444;
+}
+
+.counter-label {
+  font-size: 0.7rem;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.counter-stat-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.counter-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+}
+
+.counter-detail-label {
+  color: #64748B;
+  font-weight: 500;
+}
+
+.counter-detail-value {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.counter-detail-value.success {
+  color: #10B981;
+}
+
+.counter-detail-value.danger {
+  color: #EF4444;
+}
+
+.counter-detail-separator {
+  color: #64748B;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .counter-cards-container {
+    padding: 1.5rem;
+  }
+
+  .counter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .counter-card {
+    padding: 1rem;
+  }
+
+  .counter-stat-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
