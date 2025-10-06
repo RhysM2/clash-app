@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/clash-app/static/css/main.13d549bd.css",
-    "main.js": "/clash-app/static/js/main.c8a4b92e.js",
+    "main.css": "/clash-app/static/css/main.95f76a68.css",
+    "main.js": "/clash-app/static/js/main.64b45d66.js",
     "index.html": "/clash-app/index.html",
-    "main.13d549bd.css.map": "/clash-app/static/css/main.13d549bd.css.map",
-    "main.c8a4b92e.js.map": "/clash-app/static/js/main.c8a4b92e.js.map"
+    "main.95f76a68.css.map": "/clash-app/static/css/main.95f76a68.css.map",
+    "main.64b45d66.js.map": "/clash-app/static/js/main.64b45d66.js.map"
   },
   "entrypoints": [
-    "static/css/main.13d549bd.css",
-    "static/js/main.c8a4b92e.js"
+    "static/css/main.95f76a68.css",
+    "static/js/main.64b45d66.js"
   ]
 }
