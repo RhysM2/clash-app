@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/clash-app/static/css/main.13d549bd.css",
+    "main.js": "/clash-app/static/js/main.fbb8ea8b.js",
+    "index.html": "/clash-app/index.html",
+    "main.13d549bd.css.map": "/clash-app/static/css/main.13d549bd.css.map",
+    "main.fbb8ea8b.js.map": "/clash-app/static/js/main.fbb8ea8b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13d549bd.css",
+    "static/js/main.fbb8ea8b.js"
+  ]
+}
